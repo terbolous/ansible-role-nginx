@@ -1,3 +1,7 @@
+{% if ansible_managed is defined %}
+# {{ ansible_managed }}
+
+{% endif %}
 [nginx]
 name=nginx repo
 baseurl=http://nginx.org/packages/centos/{{ ansible_distribution_major_version }}/$basearch/
